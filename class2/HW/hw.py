@@ -7,7 +7,7 @@ name = "David"
 weight = 64.5
 zip = "545"
 
-int整數  :zip
+int整數  :zip apple age
 bool布林數值 :minor
 str字串  :name
 float浮點數:weight

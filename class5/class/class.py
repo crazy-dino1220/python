@@ -15,19 +15,32 @@
 # True or False True
 # True or True True
 
-password = input("請輸入密碼:")
-if password == "1255":
-    print("看來你又一次矇對了呢")
-else:
-    print("看來你又忘記密碼了呢，所以我會在一次提示你密碼:125X")
-    password = input("請輸入密碼:")
-    if password == "1255":
-        print("看來你又一次矇對了呢")
+# password = input("請輸入密碼:")
+# if password == "1255":
+#     print("看來你又一次矇對了呢")
+# else:
+#     print("看來你又忘記密碼了呢，所以我會在一次提示你密碼:125X")
+#     password = input("請輸入密碼:")
+#     if password == "1255":
+#         print("看來你又一次矇對了呢")
 
-    else:
-        print("既然又一次猜錯了，那直接告訴你密碼ㄅ:1255")
-        password = input("請輸入密碼:")
-        if password == "1255":
-            print("你終於對了呢")
-        else:
-            print("stupid bro")
+#     else:
+#         print("既然又一次猜錯了，那直接告訴你密碼ㄅ:1255")
+#         password = input("請輸入密碼:")
+#         if password == "1255":
+#             print("你終於對了呢")
+#         else:
+#             print("stupid bro")
+
+score = float(input("Please input score: "))
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+elif score >= 70:
+    grade = "C"
+elif score >= 60:
+    grade = "D"
+else:
+    grade = "E"
+print("Your grade is:", grade)

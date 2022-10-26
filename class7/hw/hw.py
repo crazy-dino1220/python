@@ -59,6 +59,16 @@ t.right(90)
 t.forward(20)
 t.left(90)
 t.stamp()
-
-t.color("yellow")
+if s == 7:
+    t.done
+t.forward(20)
+t.stamp()
+t.left(180)
+t.forward(20 * 2)
+t.stamp()
+t.left(180)
+t.forward(20)
+t.right(90)
+t.forward(20)
+t.stamp()
 t.done()

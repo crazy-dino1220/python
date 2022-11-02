@@ -30,6 +30,8 @@ t.stamp()
 for i in range((s - 3) // 2):
     t.forward(20)
     t.stamp()
+if s == 3:
+    t.done
 t.left(180)
 for i in range(s - 2):
     t.forward(20)
@@ -37,6 +39,8 @@ t.left(180)
 for i in range((s - 3) // 2):
     t.forward(20)
     t.stamp()
+if s == 5:
+    t.done
 t.right(90)
 t.forward(20)
 t.left(90)
@@ -52,7 +56,6 @@ t.left(180)
 for i in range((s - 3) // 2):
     t.forward(20)
     t.stamp()
-
 if s < 9:
     t.right(90)
     t.forward(20)

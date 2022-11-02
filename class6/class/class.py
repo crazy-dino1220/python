@@ -20,7 +20,9 @@
 
 # for i in range(5):
 import turtle as t
-for i in range(100):
+
+t.pensize(10)
+for i in range(25):
     t.forward(30)
     t.right(15)
 

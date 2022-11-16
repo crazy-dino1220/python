@@ -21,7 +21,7 @@ import random as s
 r = s.randrange(1, 101)
 t = 0
 while t != r:
-    t = int(input("請猜一個數字"))
+    t = int(input("請猜一個數字(1~100):"))
     if t < r:
         print("在大一點")
     elif t > r:

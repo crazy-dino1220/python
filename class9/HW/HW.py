@@ -2,6 +2,8 @@ import random as s
 
 r = s.randrange(1, 101)
 t = 0
+g = 1
+h = 100
 while t != r:
     t = int(input("請猜一個數字"))
     if t < r:

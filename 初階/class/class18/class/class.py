@@ -20,3 +20,5 @@ total = myFile.read()
 print(total)
 #5. 關閉檔案
 myFile.close()
+
+singular - 洺睿

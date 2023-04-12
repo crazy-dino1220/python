@@ -1,1 +1,3 @@
-print(bool=0)
+a = 50
+b = (len(a))
+print(b)

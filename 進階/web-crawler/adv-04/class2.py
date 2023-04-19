@@ -14,6 +14,7 @@ os.chdir(sys.path[0])
 
 def show_result():
     entry_text = entry.get()
+    try:
     b = eval(entry_text)
     lable.config(text=b)
 

@@ -9,7 +9,7 @@ from matplotlib.font_manager import FontProperties
 
 font_size = 20
 window = tk.Tk()
-window.title("YouTube")
+window.title("YouTubew")
 window.option_add("*font", ("Helvetica", font_size))
 style = Style(theme="minty")
 style.configure('my.TButton', font=('Helvetica', font_size))

@@ -19,10 +19,10 @@ async def on_ready():
 
 
 #######################指令#######################
-@bot.slash_command(name="LOL", description="*&^#$^*^E@@%&*")
-async def *&^#$^*^E@@%&*(ctx):
+@bot.slash_command(name="ez", description="小婕婕聞到你的屁了")
+async def ez(ctx):
     """輸入hello, 會回傳Hey!"""
-    await ctx.respond("*&^#$^*^E@@%&*!")
+    await ctx.respond("小婕婕聞到你的屁了")
 
 
 #######################啟動#######################

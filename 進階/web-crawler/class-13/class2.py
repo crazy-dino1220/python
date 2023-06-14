@@ -1,5 +1,6 @@
 #######################模組#######################
 import discord  # pip install -U py-cord
+import random as r
 import os
 from dotenv import load_dotenv  # pip install -U python-dotenv
 
@@ -19,7 +20,7 @@ async def on_ready():
 
 
 #######################指令#######################
-@bot.slash_command(name="ez", description="小婕婕聞到你的屁了")
+@bot.slash_command(name="smell", description="小婕婕聞到你的屁了")
 async def ez(ctx):
     """輸入hello, 會回傳Hey!"""
     await ctx.respond("小婕婕聞到你的屁了")

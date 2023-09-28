@@ -19,7 +19,7 @@ def gophers_update():
 
 
 def score_update():
-    score_sur = score_font.render(str(score, False, red))
+    score_sur = score_font.render(str(score), False, red)
     screen.blit(score_sur, (10, 10))
 
 

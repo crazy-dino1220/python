@@ -128,7 +128,7 @@ def create_enemy():
 
 def is_hit(x1, y1, x2, y2, r):
     """檢查兩個物件是否碰撞"""
-    if ((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)) < (r * r):
+    if ((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)) < (r * r):  # 兩個物件距離小於半徑的平方
         return True
     else:
         return False
@@ -198,7 +198,8 @@ emy_list: List[Enemy] = []  # 敵機列表
 emy_num = 5  # 敵機數量
 
 for i in range(emy_num):
-    emy_list.append(Enemy(*create_enemy(), emy_shift))
+    emy_list.append(Enemy(*create_enemy(), emy_shift))  # 建立敵機並加入敵機列表
+
 ######################分數設定######################
 score = 0  # 分數計數
 typeface = pygame.font.get_default_font()
@@ -218,7 +219,7 @@ while True:
             if event.key == K_F1:
                 screen = pygame.display.set_mode(bg_size, FULLSCREEN)
             elif event.key == K_ESCAPE:
-                screen = pygame.display.set_mode(bg_size)
+                screen = pygame.display.set_mode(bg_size)  # 關閉全螢幕
 
             if event.key == K_SPACE and msl_cooldown == 0:  # 檢查冷卻時間
                 for missile in missiles:

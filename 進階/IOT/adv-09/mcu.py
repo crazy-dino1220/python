@@ -1,5 +1,7 @@
 import network
+from umqtt.simple import MQTTClient
 from machine import Pin, PWM
+import sys
 
 
 class gpio:
@@ -121,3 +123,36 @@ class LED:
             self.RED = PWM(Pin(r_pin), freq=frequency, duty=duty_cycle)
             self.GREEN = PWM(Pin(g_pin), freq=frequency, duty=duty_cycle)
             self.BLUE = PWM(Pin(b_pin), freq=frequency, duty=duty_cycle)
+
+
+class MQTT:
+    def __init__(
+        self, MQTTClientId, mq_sever, mqtt_username, mqtt_password, keepalive=30
+    ):
+        self.mq_sever = mq_sever
+        self.MQTTClientId = MQTTClientId
+        self.mqtt_username = mqtt_username
+        self.mqtt_password = mqtt_password
+        self.mqClient0 = MQTTClient(
+            MQTTClientId,
+            mq_sever,
+            user=mqtt_username,
+            password=mqtt_password,
+            keepalive=30,
+        )
+
+    def connect(self):
+        try:
+            self.mqClient0.connect()  #
+        except:
+            sys.exit()
+        finally:
+            print("connected MQTT sever")
+
+    def subscribe(self, topic, on_message):
+        self.mqClient0.set_callback(on_message)
+        self.mqClient0.subscribe(topic)
+
+    def check_msg(self):
+        self.mqClient0.check_msg()
+        self.mqClient0.ping()
